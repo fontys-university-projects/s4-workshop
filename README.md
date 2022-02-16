@@ -9,7 +9,7 @@
  ## PWA todo list 
 - [x] Offline page
 ## IOS todo list
-
+- [ ] Get a Mac (yeah.. F@#k Apple)
 ## Android todo list
 
 I will update the list when I find the document again haha, feel free to comment the todo 😅
