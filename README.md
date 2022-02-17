@@ -8,6 +8,7 @@
 
  ## PWA todo list 
 - [x] Offline page
+- [ ] Push Notification support
 ## IOS todo list
 - [ ] Get a Mac (yeah.. F@#k Apple)
 ## Android todo list
