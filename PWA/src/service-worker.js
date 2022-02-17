@@ -1,3 +1,5 @@
+import { precacheAndRoute } from 'workbox-precaching/precacheAndRoute';
+
 self.addEventListener("push", (e) => {
   const data = e.data.json();
   self.registration.showNotification(data.title, {
@@ -5,3 +7,5 @@ self.addEventListener("push", (e) => {
     icon: "/assets/logo.png",
   });
 });
+
+precacheAndRoute(self.__WB_MANIFEST);
