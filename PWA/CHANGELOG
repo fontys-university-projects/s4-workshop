@@ -1,1 +1,2 @@
-There is no changes atm
+17/02/2022
+-Removed workbox, since I am not really using it and the build does not like it
