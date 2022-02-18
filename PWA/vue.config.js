@@ -8,5 +8,9 @@ module.exports = {
   pwa: {
     name: "Fontys PWA Offline App Test",
     themeColor: "#007777",
+    workboxPluginMode: "InjectManifest",
+    workboxOptions: {
+      swSrc: "./src/service-worker.js",
+    },
   },
 };
