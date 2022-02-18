@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     amIOnline(e) {
-      console.log("am i online?: ", e);
+      // console.log("am i online?: ", e);
       this.online = e;
     },
   },

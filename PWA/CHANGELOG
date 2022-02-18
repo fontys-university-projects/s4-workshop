@@ -3,3 +3,4 @@
 
 18/02/2022
 -Due to lack of documentation Github Issues exist! Workbox is re-added with its fixes, notifications are back and working
+- Added GeoLocation capability with google maps i-frame integration

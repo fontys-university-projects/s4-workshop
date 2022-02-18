@@ -98,6 +98,24 @@
     <div class="buttons">
       <button @click="triggerPush()">Trigger Push Notification</button>
     </div>
+    <div class="buttons">
+      <button @click="getNetworkStats()">Get Internet connection info</button>
+    </div>
+    <iframe
+      v-if="!!activateMap"
+      v-bind:src="
+        'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d155.39834145954697!2d' +
+        position.longitude +
+        '!3d' +
+        position.latitude +
+        '!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snl!4v1645196782001!5m2!1sen!2snl'
+      "
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
   </div>
 </template>
 
@@ -106,6 +124,12 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      position: [],
+      activateMap: false,
+    };
   },
   methods: {
     triggerPush: function () {
@@ -151,6 +175,15 @@ export default {
         }
         return outputArray;
       }
+    },
+
+    getNetworkStats: function () {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((location) => {
+          this.position = location.coords;
+        });
+      }
+      this.activateMap = true;
     },
   },
 };
