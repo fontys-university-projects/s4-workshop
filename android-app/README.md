@@ -1,3 +1,6 @@
+**WARNING**
+Gradle has always been one of my least favorite tools in the world. If the app does not run, it is because Gradle does not like ExFAT drives. It should be NTFS.
+
 ## Creating a production distributable
 ```
 ionic build
