@@ -18,7 +18,7 @@ ionic cap add android
 ionic cap open android
 ```
 
-##If you want to use an external device you need to use another command
+## If you want to use an external device you need to use another command
 ```
 ionic cap run android -l --external
 ```
