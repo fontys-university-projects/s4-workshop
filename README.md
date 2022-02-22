@@ -28,7 +28,7 @@ The app is going to be used for organizers to use a more simplified ticketing sy
 - [ ] Rest API
 - [ ] API DOCS
   
-### **Frontend**
+### **Frontend** 
 - [ ] Capacitor
 - [ ] TailwindCSS
 - [ ] Vue
