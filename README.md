@@ -21,6 +21,12 @@ I will update the list when I find the document again haha, feel free to comment
 The app is going to be used for organizers to use a more simplified ticketing system. It will use a QR scan feature (might add NFC), which will allow for faster scanning and management without worries. There will be a possibility to issue QR or NFC (TBD), on the physical tickets.
 
 *A shot summary of the to-do list (in reality there is more but my mind hasn't decided what to use)*
+
+*For the QR Scanning, there is an option to use the QR Bot/QR Scanner library, but it required their app to be installed as well*
+
+- [x] Qr code generation Functionality
+- [ ] Scanning the QR codes (TBD, the library needs an update for the scanner to work, the alternative is the Google one which is 7 years old /Broken/)
+  
 ### **Backend**
 
 - [ ] Prisma database

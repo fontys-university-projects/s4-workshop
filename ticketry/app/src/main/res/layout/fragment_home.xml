@@ -6,17 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/qrImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:contentDescription="qr_placement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408"
+        app:srcCompat="@drawable/ic_qr_placement" />
+
+    <Button
+        android:id="@+id/ticketButton"
+        android:layout_width="237dp"
+        android:layout_height="55dp"
+        android:text="generate qr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/qrImage"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/concertLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:contentDescription="concert_logo"
+        app:layout_constraintBottom_toTopOf="@+id/qrImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217"
+        app:srcCompat="@drawable/spinnin__records_logo" />
+
+    <TextView
+        android:id="@+id/countdownText"
+        android:layout_width="59dp"
+        android:layout_height="55dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qrImage"
+        app:layout_constraintVertical_bias="0.295" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
