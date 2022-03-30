@@ -7,8 +7,24 @@
 *There will be also a todo list, which will be updated each time with the tasks*
 
 ## PWA todo list 
-- [x] Offline page
-- [ ] Push Notification support
+### Backend
+- [x] Simple Auth
+    - [x] Sign In
+    - [x] Sign Up
+    - [x] Log out
+- [ ] Implement the Push Notification Server
+- [x] API Docs
+
+### Frontend
+- [ ] Auth Portal
+    - [ ] Sign In
+    - [ ] Sign Up
+- [x] Tickets Page
+- [ ] Dynamic Home Page (gets removed on successful login)
+- [ ] Ticket Dashboard
+  - [ ] Analytics
+  - [ ] Create Concert
+
 ## IOS todo list
 - [ ] Get a Mac (yeah.. F@#k Apple)
 ## Android todo list
