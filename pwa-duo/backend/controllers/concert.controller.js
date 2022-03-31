@@ -10,11 +10,11 @@ class concertController {
             let user = req.user
             let body = req.body
             let merge = { ...user, ...body }
-            const cnrt = await concert.create(merge)
+            const data = await concert.create(merge)
             res.status(200).json({
                 status: true,
                 message: 'New Concert was registered successfully',
-                data: cnrt
+                data: data
             })
         }
         catch (e) {
@@ -28,15 +28,30 @@ class concertController {
             let user = req.user
             let body = req.body
             let merge = { ...user, ...body }
-            const cnrt = await concert.ticketBuy(merge)
+            const data = await concert.ticketBuy(merge)
             res.status(200).json({
                 status: true,
                 message: 'Ticket purchase was successful',
-                data: cnrt
+                data: data
             })
         }
         catch (e) {
             next(createError(e.statusCode, e.message))
+            console.log(e)
+        }
+    }
+    static tickets = async (req, res, next) => {
+
+        try {
+            const data = await concert.tickets(req.user)
+            res.status(200).json({
+                status: true,
+                message: 'Purchased Ticket list',
+                data: data
+            })
+        }
+        catch (e) {
+            // next(createError(e.statusCode, e.message))
             console.log(e)
         }
     }

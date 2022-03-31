@@ -5,5 +5,6 @@ const privilege = require('../middlewares/privilege')
 
 router.post('/create', auth, privilege, concert.create )
 router.post('/ticketBuy', auth, concert.ticketBuy)
+router.get('/tickets', auth, concert.tickets)
 
 module.exports = router

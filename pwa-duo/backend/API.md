@@ -52,3 +52,9 @@
   "seat": "10"
 }
 ```
+
+ ### **GET** *http://localhost:5000/api/concert/tickets*
+
+<br>
+
+Gets the list of user tickets. This is per user ticket request, it cannot be used to view other users tickets

@@ -69,6 +69,44 @@ class authService {
             }
         })
     }
+
+    static async tickets(data) {
+        const { uid } = data
+
+        const user = await prisma.user.findUnique({
+            where: {
+                uid
+            }
+        })
+
+        const tickets = await prisma.ticket.findMany({
+            where: {
+                userId: user.id
+            },
+            select: {
+                qrCode: true,
+                entrance: true,
+                sector: true,
+                row: true,
+                seat: true,
+                concert: {
+                    select: {
+                        name: true,
+                        logoURL: true,
+                        description: true,
+                        date: true,
+                        location: true
+                    }
+                }
+            }
+        })
+
+        if(!tickets){
+            throw createError.NotFound(`You don't have any purchased tickets at the moment`)
+        }
+
+        return(tickets)
+    }
 }
 
 module.exports = authService
