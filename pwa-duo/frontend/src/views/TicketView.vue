@@ -4,7 +4,7 @@
     class="relative px-4 pt-16 pb-20 bg-gray-50 dark:bg-gray-700 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
   >
     <div class="absolute inset-0">
-      <div class="bg-white dark:bg-gray-800 h-1/3 sm:h-full" />
+      <div class="bg-white dark:bg-gray-800 h-1/3 sm:2/3" />
     </div>
     <div class="relative mx-auto max-w-7xl">
       <div class="text-center">
@@ -26,21 +26,21 @@
         <div
           v-for="(concert, index) in concerts"
           :key="concert.title"
-          class="flex flex-col overflow-hidden rounded-lg shadow-lg shadow-indigo-900 dark:shadow-indigo-500"
+          class="flex flex-col overflow-hidden rounded-lg shadow-lg shadow-indigo-300 dark:shadow-indigo-500"
         >
           <div class="flex-shrink-0">
             <img
-              class="object-cover w-full h-90"
+              class="object-cover w-full h-80"
               :src="concert.imageUrl"
               alt=""
             />
           </div>
           <div
-            class="flex flex-col justify-between flex-1 p-6 text-center bg-white dark:bg-gray-900"
+            class="flex flex-col justify-between flex-1 p-5 text-center bg-white dark:bg-gray-900"
           >
             <div class="flex-1">
               <p
-                class="text-xl font-semibold text-indigo-900 dark:text-indigo-500"
+                class="text-xl font-semibold text-indigo-700 dark:text-indigo-500"
               >
                 {{ concert.title }}
               </p>
@@ -63,7 +63,7 @@
                 type="button"
                 @click="toggleElement(index)"
                 :key="index"
-                class="inline-flex items-center px-6 py-3 mt-6 text-base font-medium text-white bg-indigo-900 border border-transparent rounded-md shadow-sm dark:bg-indigo-500 shadow-indigo-900 dark:shadow-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                class="inline-flex items-center px-6 py-3 mt-6 text-base font-medium text-white bg-indigo-700 border border-transparent rounded-md shadow-sm dark:bg-indigo-500 shadow-indigo-700 dark:shadow-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <QrcodeIcon class="w-5 h-5 mr-3 -ml-1" aria-hidden="true" />
                 Reveal QR Code
@@ -105,8 +105,7 @@ const concerts = [
     datetime: "2020-03-10",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-    imageUrl:
-      "https://www.twitchcon.com/uploads/twitchcon2022-blogheader-1200x600-1.png",
+    imageUrl: "https://player.m7g.twitch.tv/twitchcon-2022-announce/poster.jpg",
     ticket: {
       qrCode:
         "2a5b8c3a2a6d440ceb3a3cacc030ddf5439a2fe21831d8e6aed885c4210e5455577c3f8ab89a011ec2f5995ea10ddeb6e6d6de0400e8d1ae77470d88b7a1807e2998d223f548c53b9689fb678e08d171db8423c35e19cd58f9dd0fa9ce9dcbce7569be2a",
