@@ -12,6 +12,11 @@
     - [x] Sign In
     - [x] Sign Up
     - [x] Log out
+- [ ] Seller Endpoint
+  - [x] Create Concerts
+  - [ ] View Sales
+- [ ] Check Up Endpoint
+  - [ ] Ticket validation
 - [ ] Implement the Push Notification Server
 - [x] API Docs
 
@@ -25,14 +30,14 @@
   - [ ] Analytics
   - [ ] Create Concert
 
+---
 ## IOS todo list
 - [ ] Get a Mac (yeah.. F@#k Apple)
+
+---
 ## Android todo list
 
-I will update the list when I find the document again haha, feel free to comment the todo 😅
-
-
-## DUO project Ticket app (eg Concerts, Museums etc) 
+## DEPRECATED duo project Ticket app (eg Concerts, Museums etc)
 
 The app is going to be used for organizers to use a more simplified ticketing system. It will use a QR scan feature (might add NFC), which will allow for faster scanning and management without worries. There will be a possibility to issue QR or NFC (TBD), on the physical tickets.
 
