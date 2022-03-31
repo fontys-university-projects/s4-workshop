@@ -21,9 +21,9 @@
 - [x] API Docs
 
 ### Frontend
-- [ ] Auth Portal
-    - [ ] Sign In
-    - [ ] Sign Up
+- [x] Auth Portal
+    - [x] Sign In
+    - [x] Sign Up
 - [x] Tickets Page
 - [ ] Dynamic Home Page (gets removed on successful login)
 - [ ] Ticket Dashboard
