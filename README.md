@@ -8,6 +8,7 @@
 
 ## PWA todo list 
 ### Backend
+
 - [x] Simple Auth
     - [x] Sign In
     - [x] Sign Up
@@ -21,6 +22,7 @@
 - [x] API Docs
 
 ### Frontend
+
 - [x] Auth Portal
     - [x] Sign In
     - [x] Sign Up
@@ -32,7 +34,16 @@
 
 ---
 ## IOS todo list
-- [ ] Get a Mac (yeah.. F@#k Apple)
+
+Linage(the name came before the idea), based on the getting started, it sparked my idea to do a list of all the Fontys Buildings and their open hours, with an Apple Maps preview of the location.
+
+- [x] Get a Mac
+- [ ] Buildings (0/15 [Number based on Google Maps])
+  - [ ] Name
+  - [ ] Location
+  - [ ] Image
+  - [ ] Open Hours
+  - [ ] Specializations (if Fontys mentions that detail)
 
 ---
 ## Android todo list
@@ -56,6 +67,7 @@ The app is going to be used for organizers to use a more simplified ticketing sy
 - [ ] API DOCS
   
 ### **Frontend** 
+
 - [ ] Capacitor
 - [ ] TailwindCSS
 - [ ] Vue
