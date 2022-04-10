@@ -38,7 +38,22 @@
 Linage(the name came before the idea), based on the getting started, it sparked my idea to do a list of all the Fontys Buildings and their open hours, with an Apple Maps preview of the location.
 
 - [x] Get a Mac
-- [ ] Buildings (0/15 [Number based on Google Maps])
+- [ ] Main Nav Page
+  - [ ] List Navigation of Campuses
+- [x] Campus Page
+  - [x] Maps
+  - [x] Avatar
+  - [x] Title
+  - [x] Working Hours
+  - [x] Description
+- [ ] Reserve Oil Page
+  - [ ] Date Time Selector
+  - [ ] Oil list
+- [ ] Dynamic Content Loading
+  - [x] Json Data
+  - [x] Model
+  - [ ] Link Data to Campus Page
+- [ ] Buildings (1/15 [Number based on Google Maps])
   - [ ] Name
   - [ ] Location
   - [ ] Image
