@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1001,
+        "name": "Eindhoven R10",
+        "location":"Rachelsmolen 1",
+        "coordinates": {
+            "latitude": 51.451219,
+            "longitude": 5.480006
+        },
+        "monThu":"7:30AM - 6:30PM",
+        "fri":"7:30AM - 6:00PM",
+        "imageName": "FontysR10",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis sapien. Integer sed ante euismod, aliquam risus in, varius tellus."
+    },
+    {
+        "id": 1002,
+        "name": "Eindhoven Strijp TQ",
+        "location":"Achtseweg Zuid 151",
+        "coordinates": {
+            "latitude": 51.451412,
+            "longitude": 5.453929
+        },
+        "monThu":"7:30AM - 6:30PM",
+        "fri":"7:30AM - 6:00PM",
+        "imageName": "StrijpTQ",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis sapien. Integer sed ante euismod, aliquam risus in, varius tellus."
+    },
+    {
+        "id": 1003,
+        "name": "Eindhoven Nexus",
+        "location":"De Rondom 1",
+        "coordinates": {
+            "latitude": 51.446525,
+            "longitude": 5.489935
+        },
+        "monThu":"7:30AM - 6:30PM",
+        "fri":"7:30AM - 6:00PM",
+        "imageName": "Nexus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis sapien. Integer sed ante euismod, aliquam risus in, varius tellus."
+    }
+]

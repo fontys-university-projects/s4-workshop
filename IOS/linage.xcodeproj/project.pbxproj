@@ -15,6 +15,12 @@
 		5B728E8227FC32DE009708FC /* linageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B728E8127FC32DE009708FC /* linageUITestsLaunchTests.swift */; };
 		5B7F5F502800ED44009262F8 /* Campus Avatar Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5F4F2800ED44009262F8 /* Campus Avatar Circle.swift */; };
 		5B7F5F522800F07F009262F8 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5F512800F07F009262F8 /* Maps.swift */; };
+		5B7F5F55280306D0009262F8 /* locationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F5F54280306D0009262F8 /* locationData.json */; };
+		5B8846C92805A773009DA72C /* CampusesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8846C82805A773009DA72C /* CampusesList.swift */; };
+		5B8846CB2805A917009DA72C /* CampusDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8846CA2805A917009DA72C /* CampusDetails.swift */; };
+		5BC8591D280310A30011797C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8591C280310A30011797C /* Location.swift */; };
+		5BC8591F280312170011797C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8591E280312170011797C /* ModelData.swift */; };
+		5BC859262804551A0011797C /* Campuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC859252804551A0011797C /* Campuses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		5B728E8127FC32DE009708FC /* linageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B7F5F4F2800ED44009262F8 /* Campus Avatar Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Campus Avatar Circle.swift"; sourceTree = "<group>"; };
 		5B7F5F512800F07F009262F8 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		5B7F5F54280306D0009262F8 /* locationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locationData.json; sourceTree = "<group>"; };
+		5B8846C82805A773009DA72C /* CampusesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusesList.swift; sourceTree = "<group>"; };
+		5B8846CA2805A917009DA72C /* CampusDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusDetails.swift; sourceTree = "<group>"; };
+		5BC8591C280310A30011797C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5BC8591E280312170011797C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		5BC859252804551A0011797C /* Campuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campuses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +108,10 @@
 		5B728E6327FC32DB009708FC /* linage */ = {
 			isa = PBXGroup;
 			children = (
+				5BC859222803133F0011797C /* Models */,
+				5BC85921280313290011797C /* Views */,
+				5B7F5F5328030681009262F8 /* Resources */,
 				5B728E6427FC32DB009708FC /* linageApp.swift */,
-				5B728E6627FC32DB009708FC /* ContentView.swift */,
-				5B7F5F4F2800ED44009262F8 /* Campus Avatar Circle.swift */,
-				5B7F5F512800F07F009262F8 /* Maps.swift */,
 				5B728E6827FC32DE009708FC /* Assets.xcassets */,
 				5B728E6A27FC32DE009708FC /* Preview Content */,
 			);
@@ -128,6 +140,36 @@
 				5B728E8127FC32DE009708FC /* linageUITestsLaunchTests.swift */,
 			);
 			path = linageUITests;
+			sourceTree = "<group>";
+		};
+		5B7F5F5328030681009262F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F5F54280306D0009262F8 /* locationData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5BC85921280313290011797C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B728E6627FC32DB009708FC /* ContentView.swift */,
+				5B7F5F4F2800ED44009262F8 /* Campus Avatar Circle.swift */,
+				5B7F5F512800F07F009262F8 /* Maps.swift */,
+				5B8846C82805A773009DA72C /* CampusesList.swift */,
+				5BC859252804551A0011797C /* Campuses.swift */,
+				5B8846CA2805A917009DA72C /* CampusDetails.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BC859222803133F0011797C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8591C280310A30011797C /* Location.swift */,
+				5BC8591E280312170011797C /* ModelData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7F5F55280306D0009262F8 /* locationData.json in Resources */,
 				5B728E6927FC32DE009708FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,10 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8846CB2805A917009DA72C /* CampusDetails.swift in Sources */,
 				5B728E6727FC32DB009708FC /* ContentView.swift in Sources */,
 				5B7F5F502800ED44009262F8 /* Campus Avatar Circle.swift in Sources */,
+				5B8846C92805A773009DA72C /* CampusesList.swift in Sources */,
+				5BC8591D280310A30011797C /* Location.swift in Sources */,
 				5B7F5F522800F07F009262F8 /* Maps.swift in Sources */,
 				5B728E6527FC32DB009708FC /* linageApp.swift in Sources */,
+				5BC859262804551A0011797C /* Campuses.swift in Sources */,
+				5BC8591F280312170011797C /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"linage/Preview Content\"";
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -449,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"linage/Preview Content\"";
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -474,8 +524,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
@@ -493,8 +545,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
@@ -513,6 +567,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.linageUITests;
@@ -530,6 +585,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M2AG5B3V;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.linageUITests;

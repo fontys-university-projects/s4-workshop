@@ -38,6 +38,13 @@
 Linage(the name came before the idea), based on the getting started, it sparked my idea to do a list of all the Fontys Buildings and their open hours, with an Apple Maps preview of the location.
 
 - [x] Get a Mac
+<<<<<<< HEAD
+- [ ] Buildings (3/15 [Number based on Google Maps])
+  - [x] Name
+  - [x] Location
+  - [x] Image
+  - [x] Open Hours
+=======
 - [ ] Main Nav Page
   - [ ] List Navigation of Campuses
 - [x] Campus Page
@@ -58,6 +65,7 @@ Linage(the name came before the idea), based on the getting started, it sparked 
   - [ ] Location
   - [ ] Image
   - [ ] Open Hours
+>>>>>>> origin/main
   - [ ] Specializations (if Fontys mentions that detail)
 
 ---
