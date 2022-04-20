@@ -38,15 +38,9 @@
 Linage(the name came before the idea), based on the getting started, it sparked my idea to do a list of all the Fontys Buildings and their open hours, with an Apple Maps preview of the location.
 
 - [x] Get a Mac
-<<<<<<< HEAD
-- [ ] Buildings (3/15 [Number based on Google Maps])
-  - [x] Name
-  - [x] Location
-  - [x] Image
-  - [x] Open Hours
 =======
-- [ ] Main Nav Page
-  - [ ] List Navigation of Campuses
+- [x] Main Nav Page
+  - [x] List Navigation of Campuses
 - [x] Campus Page
   - [x] Maps
   - [x] Avatar
@@ -56,20 +50,17 @@ Linage(the name came before the idea), based on the getting started, it sparked 
 - [ ] Reserve Oil Page
   - [ ] Date Time Selector
   - [ ] Oil list
-- [ ] Dynamic Content Loading
+- [x] Dynamic Content Loading
   - [x] Json Data
   - [x] Model
-  - [ ] Link Data to Campus Page
-- [ ] Buildings (1/15 [Number based on Google Maps])
-  - [ ] Name
-  - [ ] Location
-  - [ ] Image
-  - [ ] Open Hours
->>>>>>> origin/main
-  - [ ] Specializations (if Fontys mentions that detail)
+  - [x] Link Data to Campus Page
+- [x] Buildings (3/15 [Number based on Google Maps])
+  - [x] Name
+  - [x] Location
+  - [x] Image
+  - [x] Open Hours
 
 ---
-## Android todo list
 
 ## DEPRECATED duo project Ticket app (eg Concerts, Museums etc)
 
