@@ -3,7 +3,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <img
         class="w-auto h-12 mx-auto"
-        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+        src="@/assets/default-monochrome.svg"
         alt="Workflow"
       />
       <h2

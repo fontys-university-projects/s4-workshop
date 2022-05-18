@@ -7,29 +7,25 @@ const createError = require('http-errors')
 
 class authService {
 
-    static async create(data) {
-        const { uid, name, logoURL, location } = data
-        if (!name && !data.date && !location) {
-            throw createError.Unauthorized('You must enter the name, logo URL, date and location of the concert')
-        }
-        const user = await prisma.user.findUnique({
+    static async concerts() {
+        const currentDate = new Date()
+        currentDate.setHours(0, 0, 0, 0);
+        const concerts = await prisma.concert.findMany({
             where: {
-                uid
+                date: {
+                    gte: currentDate
+                }
+            },
+            select: {
+                name: true,
+                logoURL: true,
+                description: true,
+                date: true,
+                location: true,
+                cid: true
             }
         })
-        const cid  = crypto.randomBytes(9).toString('hex')
-        data.date = new Date(data.date)
-        await prisma.concert.create({
-            data:{
-                name: name,
-                logoURL: logoURL,
-                date: data.date,
-                location: location,
-                cid: cid,
-                userId: user.id
-
-            }
-        })
+        return(concerts)
     }
 
     static async ticketBuy(data) {
@@ -54,11 +50,11 @@ class authService {
             }
         })
         
-        const qrCode = crypto.randomBytes(100).toString('hex')
+        const tid = crypto.randomBytes(45).toString('hex')
 
         await prisma.ticket.create({
             data: {
-                qrCode: qrCode,
+                tid: tid,
                 entrance: '2',
                 sector: 'A',
                 row: row,
@@ -78,13 +74,65 @@ class authService {
                 uid
             }
         })
-
+        const currentDate = new Date()
+        currentDate.setHours(0, 0, 0, 0);
         const tickets = await prisma.ticket.findMany({
             where: {
-                userId: user.id
+                userId: user.id,
+                concert: {
+                    date: {
+                        gte: currentDate
+                    }
+                }
+            },
+            orderBy:{
+                concert: {
+                    date: 'asc'
+                }
             },
             select: {
-                qrCode: true,
+                tid: true,
+                entrance: true,
+                sector: true,
+                row: true,
+                seat: true,
+                concert: {
+                    select: {
+                        name: true,
+                        logoURL: true,
+                        description: true,
+                        date: true,
+                        location: true
+                    }
+                }
+            }
+        })
+
+        if(!tickets){
+            throw createError.NotFound(`You don't have any purchased tickets at the moment`)
+        }
+
+        return(tickets)
+    }
+
+    static async allTickets(data) {
+        const { uid } = data
+
+        const user = await prisma.user.findUnique({
+            where: {
+                uid
+            }
+        })
+        const tickets = await prisma.ticket.findMany({
+            where: {
+                userId: user.id,
+            },
+            orderBy:{
+                concert: {
+                    date: 'asc'
+                }
+            },
+            select: {
                 entrance: true,
                 sector: true,
                 row: true,

@@ -9,7 +9,9 @@ const auth = async (req, res, next) => {
     if (!req.headers.authorization) {
         return next(createError.Unauthorized('Access token is required'))
     }
-
+    if (req.headers.authorization == "Bearer null") {
+        return next(createError.Unauthorized('Access token is required'))
+    }
     const token = req.headers.authorization.split(' ')[1]
 
     if (!token) {

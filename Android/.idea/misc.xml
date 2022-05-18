@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/Android/app/src/main/res/layout/activity_main.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/Android/app/src/main/res/layout/fragment_dashboard.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/Android/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/Android/app/src/main/res/layout/fragment_ticket_scan.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/ticketry/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.331" />
         <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/ticketry/app/src/main/res/drawable/ic_qr_placement.xml" value="0.331" />
         <entry key="..\:/Users/xxsup/Documents/Fontys/second-year/Gitlab/martin-workshop/ticketry/app/src/main/res/layout/activity_main.xml" value="0.33" />

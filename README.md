@@ -13,12 +13,11 @@
     - [x] Sign In
     - [x] Sign Up
     - [x] Log out
-- [ ] Seller Endpoint
+- [x] Seller Endpoint
   - [x] Create Concerts
-  - [ ] View Sales
-- [ ] Check Up Endpoint
-  - [ ] Ticket validation
-- [ ] Implement the Push Notification Server
+  - [x] View Sales
+- [x] Check Up Endpoint
+  - [x] Ticket validation
 - [x] API Docs
 
 ### Frontend
@@ -27,10 +26,12 @@
     - [x] Sign In
     - [x] Sign Up
 - [x] Tickets Page
-- [ ] Dynamic Home Page (gets removed on successful login)
-- [ ] Ticket Dashboard
-  - [ ] Analytics
-  - [ ] Create Concert
+- [x] Dynamic Home Page (gets removed on successful login)
+- [x] Ticket Dashboard
+  - [x] Analytics
+  - [x] Create Concert
+- [x] Ticket Scan Area
+  - [x] Add NFC Capabilities
 
 ---
 ## IOS todo list

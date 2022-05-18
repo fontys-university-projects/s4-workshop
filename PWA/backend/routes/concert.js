@@ -1,10 +1,10 @@
 const router = require('express').Router()
 const concert = require('../controllers/concert.controller')
 const auth = require('../middlewares/auth')
-const privilege = require('../middlewares/privilege')
 
-router.post('/create', auth, privilege, concert.create )
+
+router.get('/concerts', auth, concert.concerts )
 router.post('/ticketBuy', auth, concert.ticketBuy)
 router.get('/tickets', auth, concert.tickets)
-
+router.get('/allTickets', auth, concert.allTickets)
 module.exports = router

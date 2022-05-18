@@ -4,16 +4,13 @@ const e = require('express')
 
 class concertController {
 
-    static create = async (req, res, next) => {
+    static concerts = async (req, res, next) => {
 
         try {
-            let user = req.user
-            let body = req.body
-            let merge = { ...user, ...body }
-            const data = await concert.create(merge)
+            const data = await concert.concerts()
             res.status(200).json({
                 status: true,
-                message: 'New Concert was registered successfully',
+                message: 'Concert list',
                 data: data
             })
         }
@@ -51,7 +48,23 @@ class concertController {
             })
         }
         catch (e) {
-            // next(createError(e.statusCode, e.message))
+            next(createError(e.statusCode, e.message))
+            console.log(e)
+        }
+    }
+
+    static allTickets = async (req, res, next) => {
+
+        try {
+            const data = await concert.allTickets(req.user)
+            res.status(200).json({
+                status: true,
+                message: 'Purchased Ticket list',
+                data: data
+            })
+        }
+        catch (e) {
+            next(createError(e.statusCode, e.message))
             console.log(e)
         }
     }

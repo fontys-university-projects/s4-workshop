@@ -1,10 +1,10 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div
-    class="relative px-4 pt-16 pb-20 bg-gray-50 dark:bg-gray-700 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+    class="relative px-4 pt-16 pb-20 bg-gray-50 dark:bg-gray-800 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
   >
     <div class="absolute inset-0">
-      <div class="bg-white dark:bg-gray-800 h-1/3 sm:2/3" />
+      <div class="bg-white dark:bg-gray-900 h-1/3 sm:2/3" />
     </div>
     <div class="relative mx-auto max-w-7xl">
       <div class="text-center">
@@ -21,41 +21,41 @@
         </p>
       </div>
       <div
-        class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
+        class="grid max-w-lg gap-3 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
       >
         <div
-          v-for="(concert, index) in concerts"
-          :key="concert.title"
+          v-for="(ticket, index) in tickets"
+          :key="ticket.tid"
           class="flex flex-col overflow-hidden rounded-lg shadow-lg shadow-indigo-300 dark:shadow-indigo-500"
         >
           <div class="flex-shrink-0">
             <img
               class="object-cover w-full h-80"
-              :src="concert.imageUrl"
+              :src="ticket.concert.logoURL"
               alt=""
             />
           </div>
           <div
-            class="flex flex-col justify-between flex-1 p-5 text-center bg-white dark:bg-gray-900"
+            class="flex flex-col justify-between flex-1 p-4 text-center bg-white dark:bg-gray-900"
           >
             <div class="flex-1">
               <p
                 class="text-xl font-semibold text-indigo-700 dark:text-indigo-500"
               >
-                {{ concert.title }}
+                {{ ticket.concert.name }}
               </p>
               <p
                 id="div1"
-                v-if="!concert.hidden"
+                v-if="!ticket.hidden"
                 class="mt-3 text-base text-gray-500 dark:text-gray-200"
               >
-                {{ concert.description }}
+                {{ ticket.concert.description }}
               </p>
               <img
-                v-if="concert.hidden"
-                class="object-cover object-center w-40 h-40 mx-auto mt-3"
-                :src="concert.ticket.qrCodeUrl"
-                :alt="'Qr Image of ' + concert.title"
+                v-if="ticket.hidden"
+                class="object-contain object-center mx-auto mt-3 w-44 h-44"
+                :src="qrcode[index]"
+                :alt="'Qr Image of ' + ticket.concert.name"
               />
             </div>
             <div>
@@ -69,20 +69,34 @@
                 Reveal QR Code
               </button>
             </div>
-            <div class="flex items-center mt-6">
-              <div class="ml-3">
+            <div class="flex items-center justify-center mt-6">
+              <div class="">
                 <div class="flex space-x-1 text-sm text-gray-500">
-                  <time :datetime="concert.datetime">
-                    {{ concert.date }}
+                  <time :datetime="convertDate(ticket.concert.date)">
+                    {{ convertDate(ticket.concert.date) }}
                   </time>
+                  <span> Entrance {{ ticket.entrance }}</span>
                   <span aria-hidden="true"> &middot; </span>
-                  <span> Entrance {{ concert.ticket.entrance }}</span>
+                  <span> Sector {{ ticket.sector }}</span>
                   <span aria-hidden="true"> &middot; </span>
-                  <span> Sector {{ concert.ticket.sector }}</span>
+                  <span> Row {{ ticket.row }}</span>
                   <span aria-hidden="true"> &middot; </span>
-                  <span> Row {{ concert.ticket.row }}</span>
-                  <span aria-hidden="true"> &middot; </span>
-                  <span> Seat {{ concert.ticket.seat }}</span>
+                  <span> Seat {{ ticket.seat }}</span>
+                </div>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <span>
+                    Location
+                    <a
+                      class="text-indigo-500 underline dark:text-indigo-400"
+                      :href="
+                        `https://www.google.com/maps/search/?api=1&query= ` +
+                        ticket.concert.location
+                      "
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >{{ ticket.concert.location }}</a
+                    ></span
+                  >
                 </div>
               </div>
             </div>
@@ -96,68 +110,7 @@
 <script>
 import { QrcodeIcon } from "@heroicons/vue/solid";
 import QRCode from "qrcode";
-const concerts = [
-  {
-    title: "Twitch Con 2022 Amsterdam",
-    href: "#",
-    category: { name: "Gaming Festival" },
-    date: "Mar 10, 2020",
-    datetime: "2020-03-10",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-    imageUrl: "https://player.m7g.twitch.tv/twitchcon-2022-announce/poster.jpg",
-    ticket: {
-      qrCode:
-        "2a5b8c3a2a6d440ceb3a3cacc030ddf5439a2fe21831d8e6aed885c4210e5455577c3f8ab89a011ec2f5995ea10ddeb6e6d6de0400e8d1ae77470d88b7a1807e2998d223f548c53b9689fb678e08d171db8423c35e19cd58f9dd0fa9ce9dcbce7569be2a",
-      qrCodeUrl: "",
-      entrance: "1",
-      sector: "1C",
-      row: "1",
-      seat: "1",
-    },
-    hidden: false,
-  },
-  {
-    title: "How to use search engine optimization to drive sales",
-    href: "#",
-    category: { name: "Video", href: "#" },
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-    date: "Mar 10, 2020",
-    datetime: "2020-03-10",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    readingTime: "4 min",
-    ticket: {
-      qrCode: "asd",
-      entrance: "1",
-      sector: "1",
-      row: "1",
-      seat: "1",
-    },
-    hidden: false,
-  },
-  {
-    title: "Improve your customer experience",
-    href: "#",
-    category: { name: "Case Study", href: "#" },
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-    date: "Feb 12, 2020",
-    datetime: "2020-02-12",
-    imageUrl:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    readingTime: "11 min",
-    ticket: {
-      qrCode: "asd",
-      entrance: "1",
-      sector: "1",
-      row: "1",
-      seat: "1",
-    },
-    hidden: false,
-  },
-];
+const axios = require("axios");
 
 export default {
   name: "HomeView",
@@ -166,20 +119,47 @@ export default {
   },
   data() {
     return {
-      concerts,
+      tickets: [],
+      qrcode: [],
     };
+  },
+  mounted() {
+    axios
+      .get("http://192.168.31.173:5000/api/concert/tickets", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
+      .then((res) => {
+        //Perform Success Action
+        this.tickets = res.data.data;
+      })
+      .catch((err) => {
+        // error.response.status Check status code
+        console.log(err);
+      });
   },
   computed: {
     listElementShow() {
-      return this.concerts.filter((e) => e.hidden);
+      return this.tickets.filter((e) => e.hidden);
     },
   },
   methods: {
     toggleElement(index) {
-      QRCode.toDataURL(concerts[index].ticket.qrCode, function (err, url) {
-        concerts[index].ticket.qrCodeUrl = url;
-      });
-      this.concerts[index].hidden = !this.concerts[index].hidden;
+      QRCode.toDataURL(
+        "https://example.com/scan-ticket?ticket=" + this.tickets[index].tid
+      )
+        .then((url) => {
+          this.qrcode[index] = url;
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+      this.tickets[index].hidden = !this.tickets[index].hidden;
+    },
+    convertDate(date) {
+      const dateConversion = new Date(date);
+      return dateConversion.toLocaleString();
     },
   },
 };

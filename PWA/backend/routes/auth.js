@@ -6,6 +6,7 @@ router.post('/register', user.register)
 
 router.post('/login', user.login)
 
-router.delete('/logout', auth, user.logout)
+router.get('/status', auth, user.loginStatus)
+router.get('/role', auth, user.role)
 
 module.exports = router

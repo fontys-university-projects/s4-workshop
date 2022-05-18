@@ -35,16 +35,13 @@ class authController {
         }
     }
 
-    static logout = async (req, res, next) => {
+    static loginStatus = async (req, res, next) => {
 
         try {
-            req.logout();
-            req.session = null;
-            req.session.destroy()
-            res.redirect('/')
+            const data = await auth.loginStatus(req.user)
             res.status(200).json({
                 status: true,
-                message: "Logout successful",
+                message: "Auth Status",
                 data
             })
         } catch (e) {
@@ -52,7 +49,20 @@ class authController {
             console.log(e)
         }
     }
+    static role = async (req, res, next) => {
 
+        try {
+            const data = await auth.role(req.user)
+            res.status(200).json({
+                status: true,
+                message: "User Role",
+                data
+            })
+        } catch (e) {
+            next(createError(e.statusCode, e.message))
+            console.log(e)
+        }
+    }
 
 }
 

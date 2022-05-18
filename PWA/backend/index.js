@@ -8,7 +8,7 @@ const multer = require('multer')
 
 
 var corsOptions = {
-    origin: "http://localhost:8050"
+    origin: "http://localhost:8080"
   }
 
 app.use(cors(corsOptions))

@@ -72,13 +72,46 @@ class authService {
         const checkPassword = bcrypt.compareSync(password, user.password)
         if (!checkPassword) throw createError.Unauthorized('Email address or password not valid')
 
-        const jti = crypto.randomBytes(4).toString('hex')
+        // const jti = crypto.randomBytes(4).toString('hex')
         const payload = {
             uid: user.uid
         }
         const accessToken = await jwt.signAccessToken(payload)
 
         return { accessToken }
+    }
+
+    static async loginStatus(data) {
+        const {uid} = data;
+
+        const user = await prisma.user.findUnique({
+            where: {
+                uid
+            }
+        })
+
+        if (!user) {
+            throw createError.Unauthorized('User is not logged in!')
+        }
+
+        return("Authenticated")
+    }
+    static async role(data) {
+        const {uid} = data;
+        const user = await prisma.user.findUnique({
+            where: {
+                uid
+            },
+            select: {
+                role: true,
+            },
+        })
+
+        if (!user) {
+            throw createError.Unauthorized('User is not logged in!')
+        }
+
+        return(user)
     }
 }
 
