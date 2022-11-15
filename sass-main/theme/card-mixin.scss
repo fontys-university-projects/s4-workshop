@@ -1,0 +1,27 @@
+@mixin hook-card-title(){ font-family: $base-heading-font-family; color: $global-primary-background !important;}
+@mixin hook-card-misc(){
+
+    .uk-card-transparent {
+        background: transparent;
+        color: $card-default-color;
+        @if(mixin-exists(hook-card-transparent)) {@include hook-card-transparent();}
+    }
+    
+    .uk-card-transparent .uk-card-title {
+        color: $card-default-title-color;
+        @if(mixin-exists(hook-card-transparent-title)) {@include hook-card-transparent-title();}
+    }
+    
+    .uk-card-transparent.uk-card-hover:hover {
+        background-color: $card-default-hover-background;
+        @if(mixin-exists(hook-card-transparent-hover)) {@include hook-card-transparent-hover();}
+    }
+    
+    .uk-card-transparent .uk-card-header {
+        @if(mixin-exists(hook-card-transparent-header)) {@include hook-card-transparent-header();}
+    }
+    
+    .uk-card-transparent .uk-card-footer {
+        @if(mixin-exists(hook-card-transparent-footer)) {@include hook-card-transparent-footer();}
+    }
+}

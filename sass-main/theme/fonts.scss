@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url(./fonts/Cinzel.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/Inter.ttf) format('ttf');
+}
+
+$global-font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", Inter, Cinzel;
+$base-heading-font-family: Cinzel, sans-serif;
+$base-body-font-family: Inter, sans-serif;

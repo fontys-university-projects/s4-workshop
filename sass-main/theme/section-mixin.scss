@@ -1,0 +1,6 @@
+@mixin hook-section-misc(){
+    .uk-section-black {
+        background: black !important;
+        @if(mixin-exists(hook-section-black)) {@include hook-section-black();}
+    }    
+}

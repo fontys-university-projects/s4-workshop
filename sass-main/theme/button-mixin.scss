@@ -1,0 +1,33 @@
+@mixin hook-button-default(){border: 2px solid $global-primary-background; color: $global-primary-background; background-color: transparent !important;}
+@mixin hook-button-misc(){
+    .uk-button-padding-small{
+        padding: 0 $global-small-gutter;
+    @if(mixin-exists(hook-button-padding-small)) {@include hook-button-padding-small();}
+    }
+    
+    .uk-button-gold {
+        background-color: $button-gold-background;
+        color: $button-gold-color;
+        border: 2px solid $global-primary-background;
+        @if(mixin-exists(hook-button-gold)) {@include hook-button-gold();}
+    }
+    
+    /* Hover + Focus */
+    .uk-button-gold:hover,
+    .uk-button-gold:focus {
+        background-color: $button-gold-hover-background;
+        color: $button-gold-hover-color;
+        border: 2px solid $button-gold-hover-color;
+        @if(mixin-exists(hook-button-gold-hover)) {@include hook-button-gold-hover();}
+    }
+    
+    /* OnClick + Active */
+    .uk-button-gold:active,
+    .uk-button-gold.uk-active {
+        background-color: $button-gold-active-background;
+        color: $button-gold-active-color;
+        border: 2px solid button-gold-active-color;
+        @if(mixin-exists(hook-button-gold-active)) {@include hook-button-gold-active();}
+    }
+    
+}

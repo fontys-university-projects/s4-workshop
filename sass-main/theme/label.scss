@@ -1,0 +1,22 @@
+$label-padding-vertical:                         0 !default;
+$label-padding-horizontal:                       $global-small-margin !default;
+$label-background:                               $global-primary-background !default;
+$label-line-height:                              $global-line-height !default;
+$label-font-size:                                $global-small-font-size !default;
+$label-color:                                    $global-inverse-color !default;
+
+
+.uk-label-custom {
+    display: inline-block;
+    padding: $label-padding-vertical $label-padding-horizontal;
+    background: transparent;
+    line-height: $label-line-height;
+    font-size: $label-font-size;
+    color: $label-background;
+    border: $label-background;
+    border-style: solid;
+    border-width: 1.5px;
+    vertical-align: middle;
+    white-space: nowrap;
+    @if(mixin-exists(hook-label-custom)) {@include hook-label-custom();}
+}

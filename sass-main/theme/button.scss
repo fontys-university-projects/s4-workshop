@@ -1,0 +1,7 @@
+$button-default-background: black;
+$button-gold-background: $global-primary-background;
+$button-gold-color: white;
+$button-gold-hover-background: darken($button-gold-background, 5%) !default;
+$button-gold-hover-color: darken($button-gold-color, 5%) !default;
+$button-gold-active-background: darken($button-gold-background, 10%) !default;
+$button-gold-active-color:  $global-primary-background;
